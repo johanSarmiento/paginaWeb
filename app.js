@@ -14,13 +14,13 @@ const aTres = document.createElement("a");
 // ASIGNANDO DEL NODO PADRE
 const nav = document.querySelector("#nav")
 // AGREGANDO LOS ATRIBUTOS
-navbar.setAttribute("class","container")
+navbar.setAttribute("class","containerHJ")
 navLog.setAttribute("class","logo")
 navlist.setAttribute("class","navlist")
 list.setAttribute("class","list")
-aUno.setAttribute("href","#")
-aDos.setAttribute("href","#")
-aTres.setAttribute("href","#")
+aUno.setAttribute("href","#QuienesSomos")
+aDos.setAttribute("href","#TrabajosFinalizados")
+aTres.setAttribute("href","#Servicios")
 // AGREGANDO LOS NODOS HIJOS
 nav.appendChild(navbar)
 navbar.appendChild(navLog)
@@ -36,7 +36,7 @@ liTres.appendChild(aTres)
 navLog.textContent = "ConstrusarHJ"
 aUno.textContent = "Quienes Somos"
 aDos.textContent = "Trabajos Finalizados"
-aTres.textContent = "Servicos "
+aTres.textContent = "Nuestros Servicos"
 
 // -----------------------------------------------------------------------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ const h1Hero = document.createElement("h1")
 const hero = document.querySelector("#hero")
 // AGREGANDO LOS ATRIBUTOS
 hero.setAttribute("class","hero")
-divHero.setAttribute("class","container")
+divHero.setAttribute("class","containerHJ")
 h1Hero.setAttribute("class","TituloHero")
 // AGREGANDO LOS NODOS HIJOS
 hero.appendChild(divHero)
@@ -73,8 +73,8 @@ const SaltoDeLinea = document.createElement("br")
 // ASIGANDO EL NODO PADRE
 const QuieneSomos = document.querySelector("#QuienesSomos")
 // AGREGANDO ATRIBUTOS  
-divSomos.setAttribute("class","container");
-divLeftSomos.setAttribute("class","divLeft container");
+divSomos.setAttribute("class","containerHJ");
+divLeftSomos.setAttribute("class","divLeft containerHJ");
 divRightSomos.setAttribute("class","divRight");
 h2Somos.setAttribute("class","TituloSomos");
 pSomos1.setAttribute("class","textoSomos1");
@@ -105,10 +105,10 @@ const buttonTrabajos = document.createElement("button");
 // ASIGANAR EL NODO PADRE
 const Trabajos = document.querySelector("#TrabajosFinalizados")
 // AGREGANDO ATRIBUTOS 
-divTrabajos.setAttribute("class","container");
+divTrabajos.setAttribute("class","containerHJ");
 h2Trabajos.setAttribute("class","TituloTrabajos");
 pTrabajos.setAttribute("class","textoTrabajo");
-buttonTrabajos.setAttribute("class","btnTabajos")
+buttonTrabajos.setAttribute("class","btnTrabajos btn-outline-secondary")
 //  AGREGANDO LOS NODOS HIJOS
 Trabajos.appendChild(divTrabajos);
 divTrabajos.appendChild(h2Trabajos);
@@ -116,6 +116,103 @@ divTrabajos.appendChild(pTrabajos);
 divTrabajos.appendChild(buttonTrabajos);
 //DANDO VALORES
 h2Trabajos.textContent = "Trabajos finalizados"
+pTrabajos.textContent = "Mira todos nuestros trabajos Finalizados !Te van a encantar!"
+buttonTrabajos.textContent = "MIRA AQUI"
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+// CRECION DE MAIN / TRABAJOS FINALIZADOS
+// ------------------------------------------------------------------------------------------------------------------------------------
+// CREACION DE LOS CREATEELEMENTS
+const divServicios = document.createElement("div");
+const divLeftServicios = document.createElement("div");
+const divRightServicios = document.createElement("div");
+const h2Servicios = document.createElement("h2");
+const h2Cotizacion = document.createElement("h2");
+const h3Construccion = document.createElement("h3");
+const h3Diseño = document.createElement("h3");
+const h3Planos = document.createElement("h3");
+const pConstruccion = document.createElement("p");
+const pDiseño = document.createElement("p");
+const pPlanos = document.createElement("p");
+const divConstruccion = document.createElement("div");
+const divDiseño = document.createElement("div");
+const divPlanos = document.createElement("div");
+const textServicios1 = document.createElement("div");
+const textServicios2 = document.createElement("div");
+const textServicios3 = document.createElement("div");
+const iconServicio1 = document.createElement("div");
+const iconServicio2 = document.createElement("div");
+const iconServicio3 = document.createElement("div");
+//ASIGNANDO EL NODO PADRE 
+const Servicos = document.querySelector("#Servicios");
+//AGREGANDO ATRIBUTOS 
+divServicios.setAttribute("class","containerHJ");
+divLeftServicios.setAttribute("class","containerHJ divLeft");
+divRightServicios.setAttribute("class","containerHJ divRight");
+divConstruccion.setAttribute("class","containerHJ divConstruccion");
+divDiseño.setAttribute("class","containerHJ divDiseño");
+divPlanos.setAttribute("class","containerHJ divPlanos");
+h2Servicios.setAttribute("class","titulo tituloServicio");
+h2Cotizacion.setAttribute("class","titulo tituloCotizacion");
+h3Construccion.setAttribute("class","subTitulo TituloConstruccion");
+h3Diseño.setAttribute("class","subTitulo TituloDiseño");
+h3Planos.setAttribute("class","subTitulo TituloPlanos");
+textServicios1.setAttribute("class","textoServicio");
+textServicios2.setAttribute("class","textoServicio");
+textServicios3.setAttribute("class","textoServicio");
+iconServicio1.setAttribute("class","icon iconConstruccion");
+iconServicio2.setAttribute("class","icon iconDiseño");
+iconServicio3.setAttribute("class","icon iconPlanos");
+//AGREGANDO LOS NODOS HIJOS
+Servicos.appendChild(divServicios);
+divServicios.appendChild(divLeftServicios);
+divServicios.appendChild(divRightServicios);
+divLeftServicios.appendChild(h2Servicios);
+divRightServicios.appendChild(h2Cotizacion);
+divLeftServicios.appendChild(divConstruccion);
+divLeftServicios.appendChild(divDiseño);
+divLeftServicios.appendChild(divPlanos);
+divConstruccion.appendChild(iconServicio1);
+divDiseño.appendChild(iconServicio2);
+divPlanos.appendChild(iconServicio3);
+divConstruccion.appendChild(textServicios1);
+divDiseño.appendChild(textServicios2);
+divPlanos.appendChild(textServicios3);
+textServicios1.appendChild(h3Construccion);
+textServicios2.appendChild(h3Diseño);
+textServicios3.appendChild(h3Planos);
+textServicios1.appendChild(pConstruccion);
+textServicios2.appendChild(pDiseño);
+textServicios3.appendChild(pPlanos);
+// DANDO VALORES
+h2Servicios.textContent = "SERVICIóS";
+h2Cotizacion.textContent = "¡HAZ TU COTIZACIóN AQUI!";
+h3Construccion.textContent = "Construccion";
+h3Diseño.textContent = "Diseño";
+h3Planos.textContent = "Planos";
+pConstruccion.textContent = "Gestión y construcción de todo tipo de edificacion, proyectos de construccion, edificaciónes, proyectos urbanísticos y proyectos de ingeniería"
+pDiseño.textContent = "Prestación de servicios profesionales y/o tecnológicos especializados en desarrollo urbano, diseño arquitectónico, estudio y levantamiento topográfico, planeación y gestión publica."
+pPlanos.textContent = "Creacion y entregas de planos, con una gran profesionalismo en cada detalle. para que pueda tener una gran idea, sobre tu vienda"
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+// CRECION DE MAIN / TRABAJOS FINALIZADOS
+// ------------------------------------------------------------------------------------------------------------------------------------
+// CREACION DE LOS CREATEELEMENTS
+const divFooter = document.createElement("div");
+const divLogoFotter = document.createElement("div");
+const divUnoFotter = document.createElement("div");
+const divDosFotter = document.createElement("div");
+const divTresFotter = document.createElement("div");
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------
+// FUNCIONES DE LA PAGINA
+
+document.querySelector(".tituloCotizacion").addEventListener("click",()=>{
+
+})
+
+
 
 
 

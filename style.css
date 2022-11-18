@@ -8,15 +8,16 @@
     --my-Primario: #F1F1F1;
     --my-Secundario: #0F3D3E;
     --my-Terciario: #E2DCC8;
+    
 }
-.container{
+.containerHJ{
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#nav .container{
+#nav .containerHJ{
     width: 100%;
     height: auto;
     background-color: var(--my-background);
@@ -26,10 +27,9 @@
 .list{
     display: flex;
     list-style: none;
-    padding-bottom: 20px;
 }
 .list li{
-    padding: 0 10px;
+    padding: 5px 10px;
 }
 .list a{
     color: var(--my-Primario);
@@ -38,19 +38,18 @@
     transition: all 0.5s;
 }
 .list a:hover{
-    font-size: 2em;
-    padding: 10px 15px;
+    font-size: 1.4em;
+    padding: 8px 10px;
     transition: all 0.5s;
 }
 .logo{
     color: var(--my-Primario);
-    padding: 20px 20px;
     font-size: 4rem;
     font-family: 'Bebas Neue', cursive;
     transition: all 0.7s;
 }
 .logo:hover{
-    padding: 30px ;
+    padding: 5px;
     font-size: 4.5em;
     transition: all 0.7s;
 }
@@ -59,7 +58,7 @@
 
 /* HERO */
 
-#hero .container{
+#hero .containerHJ{
     color:var(--my-Primario);
     width: 100%;
     height: 100vh;
@@ -68,6 +67,8 @@
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)
     ),url(./images/hero.avif);
+    background-position: center;
+    background-size: cover;
 }
 #hero .TituloHero{
     font-size: 5rem;
@@ -76,7 +77,7 @@
 }
 
 /* QUIENES SOMOS */
-#QuienesSomos .container{
+#QuienesSomos .containerHJ{
     width: 100%;
     height: 100vh;
     flex-direction: row;
@@ -92,9 +93,88 @@
 }#QuienesSomos .divLeft *{
     padding: 10px 0;
     font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 #QuienesSomos .divRight{
-    width: 45%;
-    height: 75%;
+    width: 35%;
+    height: 85%;
     background-image: url(./images/Quiene-somos.avif);
+    background-position: center;
+    background-size: cover ;
+}
+
+
+/* TRABAJOS FINALIZADOS */
+#TrabajosFinalizados .containerHJ{
+    flex-direction: column;
+    background-color: var(--my-Secundario);
+    color: var(--my-Primario);
+}
+#TrabajosFinalizados .containerHJ *{
+    margin-top: 20px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#TrabajosFinalizados .btnTrabajos{
+    transition:  0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+#TrabajosFinalizados .btnTrabajos:hover{
+    transition:  0.3s ease-in-out;
+}
+
+
+
+
+/* SERVICIOS */
+#Servicios .containerHJ{
+    height: 100vh;
+    justify-content: space-evenly;
+    background-color: var(--my-Primario);
+}
+#Servicios .subTitulo,.titulo{
+    color: var(--my-Secundario);
+}   
+#Servicios .divLeft{
+    width: 45%;
+    flex-direction: column;
+}
+#Servicios .divLeft *{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+#Servicios .titulo{
+    padding-top:20px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.8em;
+}
+#Servicios .subTitulo{
+    font-weight: 900;
+    font-size: 1.8em;
+}
+#Servicios .divRight{
+    width: 45%;
+    flex-direction: column;
+}
+#Servicios .divConstruccion{
+    flex-direction: row;
+}
+#Servicios .textoServicio{
+    width: 70%;
+}
+#Servicios .icon{
+    width: 70px;
+    height:70px;
+}
+#Servicios .iconConstruccion{
+    background: url(./icon/construcion.svg);
+}
+#Servicios .iconDiseño{
+    background: url(./icon/diseño.svg);
+}
+#Servicios .iconPlanos{
+    background: url(./icon/planos.svg);
 }
