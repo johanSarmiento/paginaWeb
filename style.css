@@ -178,3 +178,7 @@
 #Servicios .iconPlanos{
     background: url(./icon/planos.svg);
 }
+#Servicios .divCotizacion{
+    height: 70%;
+    width: 45%;
+}

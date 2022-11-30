@@ -120,12 +120,42 @@ pTrabajos.textContent = "Mira todos nuestros trabajos Finalizados !Te van a enca
 buttonTrabajos.textContent = "MIRA AQUI"
 // -----------------------------------------------------------------------------------------------------------------------------------
 
-// CRECION DE MAIN / TRABAJOS FINALIZADOS
+// CRECION DE MAIN / SERVICIOS
 // ------------------------------------------------------------------------------------------------------------------------------------
 // CREACION DE LOS CREATEELEMENTS
 const divServicios = document.createElement("div");
 const divLeftServicios = document.createElement("div");
 const divRightServicios = document.createElement("div");
+const divConstruccion = document.createElement("div");
+const divDiseño = document.createElement("div");
+const divPlanos = document.createElement("div");
+const divCotizacion = document.createElement("div");
+const formCotizaicon = document.createElement("form")
+const divNombre = document.createElement("div");
+const divApellido = document.createElement("div");
+const divCorreo = document.createElement("div");
+const divCiudad = document.createElement("div");
+const divDepartamento = document.createElement("div");
+const divComentario = document.createElement("div");
+const labelNombre = document.createElement("label");
+const labelApellido = document.createElement("label");
+const labelCorreo = document.createElement("label");
+const labelCiudad = document.createElement("label");
+const labelDepartamento = document.createElement("label");
+const labelComentario = document.createElement("label");
+const inputNombre = document.createElement("input");
+const inputApellido = document.createElement("input");
+const inputCorreo = document.createElement("input");
+const iinputCiudad = document.createElement("input");
+const inputDepartamento = document.createElement("input");
+const inputComentario = document.createElement("input");
+const btnCotizacion = document.createAttribute("button");
+const textServicios1 = document.createElement("div");
+const textServicios2 = document.createElement("div");
+const textServicios3 = document.createElement("div");
+const iconServicio1 = document.createElement("div");
+const iconServicio2 = document.createElement("div");
+const iconServicio3 = document.createElement("div");
 const h2Servicios = document.createElement("h2");
 const h2Cotizacion = document.createElement("h2");
 const h3Construccion = document.createElement("h3");
@@ -134,15 +164,6 @@ const h3Planos = document.createElement("h3");
 const pConstruccion = document.createElement("p");
 const pDiseño = document.createElement("p");
 const pPlanos = document.createElement("p");
-const divConstruccion = document.createElement("div");
-const divDiseño = document.createElement("div");
-const divPlanos = document.createElement("div");
-const textServicios1 = document.createElement("div");
-const textServicios2 = document.createElement("div");
-const textServicios3 = document.createElement("div");
-const iconServicio1 = document.createElement("div");
-const iconServicio2 = document.createElement("div");
-const iconServicio3 = document.createElement("div");
 //ASIGNANDO EL NODO PADRE 
 const Servicos = document.querySelector("#Servicios");
 //AGREGANDO ATRIBUTOS 
@@ -163,6 +184,16 @@ textServicios3.setAttribute("class","textoServicio");
 iconServicio1.setAttribute("class","icon iconConstruccion");
 iconServicio2.setAttribute("class","icon iconDiseño");
 iconServicio3.setAttribute("class","icon iconPlanos");
+divCotizacion.setAttribute("class","divCotizacion containerHJ");
+formCotizaicon.setAttribute("class","formularioCotazacion");
+inputNombre.setAttribute("type","text");
+inputNombre.setAttribute("id","nombre");
+inputNombre.setAttribute("class","formNombre");
+labelNombre.setAttribute("for","nombre");
+inputApellido.setAttribute("type","text");
+inputApellido.setAttribute("id","Apellido");
+inputApellido.setAttribute("class","formApellido");
+labelApellido.setAttribute("for","Apellido");
 //AGREGANDO LOS NODOS HIJOS
 Servicos.appendChild(divServicios);
 divServicios.appendChild(divLeftServicios);
@@ -193,9 +224,11 @@ h3Planos.textContent = "Planos";
 pConstruccion.textContent = "Gestión y construcción de todo tipo de edificacion, proyectos de construccion, edificaciónes, proyectos urbanísticos y proyectos de ingeniería"
 pDiseño.textContent = "Prestación de servicios profesionales y/o tecnológicos especializados en desarrollo urbano, diseño arquitectónico, estudio y levantamiento topográfico, planeación y gestión publica."
 pPlanos.textContent = "Creacion y entregas de planos, con una gran profesionalismo en cada detalle. para que pueda tener una gran idea, sobre tu vienda"
+labelNombre.textContent = "Nombre";
+labelApellido.textContent = "Apellido";
 // -----------------------------------------------------------------------------------------------------------------------------------
 
-// CRECION DE MAIN / TRABAJOS FINALIZADOS
+// CRECION DE MAIN / FOOTER
 // ------------------------------------------------------------------------------------------------------------------------------------
 // CREACION DE LOS CREATEELEMENTS
 const divFooter = document.createElement("div");
@@ -204,12 +237,22 @@ const divUnoFotter = document.createElement("div");
 const divDosFotter = document.createElement("div");
 const divTresFotter = document.createElement("div");
 
-
 // ----------------------------------------------------------------------------------------------------------------------------------------
 // FUNCIONES DE LA PAGINA
 
 document.querySelector(".tituloCotizacion").addEventListener("click",()=>{
+    divRightServicios.appendChild(divCotizacion);
+    divCotizacion.appendChild(divNombre);
+    divCotizacion.appendChild(divApellido);
+    divNombre.appendChild(labelNombre);
+    divNombre.appendChild(inputNombre);
+    divApellido.appendChild(labelApellido);
+    divApellido.appendChild(inputApellido);
 
+})
+
+document.querySelector(".tituloCotizacion").addEventListener("dblclick",()=>{
+    divCotizacion.remove();
 })
 
 
