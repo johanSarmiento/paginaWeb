@@ -17,6 +17,8 @@
     align-items: center;
     justify-content: center;
 }
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* NAVBAR */
 #nav .containerHJ{
     width: 100%;
     height: auto;
@@ -55,7 +57,7 @@
 }
 
 
-
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* HERO */
 
 #hero .containerHJ{
@@ -75,7 +77,7 @@
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
 }
-
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* QUIENES SOMOS */
 #QuienesSomos .containerHJ{
     width: 100%;
@@ -90,7 +92,8 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-}#QuienesSomos .divLeft *{
+}
+#QuienesSomos .divLeft *{
     padding: 10px 0;
     font-size: 1.5em;
     font-family: 'Montserrat', sans-serif;
@@ -104,7 +107,7 @@
     background-size: cover ;
 }
 
-
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* TRABAJOS FINALIZADOS */
 #TrabajosFinalizados .containerHJ{
     flex-direction: column;
@@ -113,14 +116,16 @@
 }
 #TrabajosFinalizados .containerHJ *{
     margin-top: 20px;
-    padding: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
-
+#TrabajosFinalizados .TituloTrabajos{
+    margin-top: 70px;
+}
 #TrabajosFinalizados .btnTrabajos{
     transition:  0.3s ease-in-out;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
+    
 }
 #TrabajosFinalizados .btnTrabajos:hover{
     transition:  0.3s ease-in-out;
@@ -128,7 +133,7 @@
 
 
 
-
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* SERVICIOS */
 #Servicios .containerHJ{
     height: 100vh;
@@ -181,4 +186,77 @@
 #Servicios .divCotizacion{
     height: 70%;
     width: 45%;
+}
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* RESPONSIVE */
+
+@media (max-width:500px){ 
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* NAVBAR */
+    .logo{
+        padding: 30px;
+    }
+    .list{
+        flex-direction: column;
+    }
+    .list li{
+        padding: 0 0 10px 0;
+
+    }
+    .list li>a{
+        font-size: 1.5em;
+    }
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* HERO */
+#hero .TituloHero{
+    font-size: 4rem;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* QUIENES SOMOS */
+#QuienesSomos .containerHJ {
+    justify-content: center;
+}
+#QuienesSomos .divLeft {
+    width: 80%;
+}
+#QuienesSomos .divLeft *{
+    font-size: 1em;
+}
+#QuienesSomos .divRight{
+    display: none;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* TRABAJOS FINALIZADOS */
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* SERVICIOS */
+#Servicios .containerHJ{
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+#Servicios .divLeft{
+    width: 90%;
+}
+#Servicios .icon{
+    margin: 20px 0;
+}
+#Servicios .textoServicio {
+    width: 100%;
+}
+#Servicios .divRight{
+    width: 90%;
+}
+#Servicios .tituloCotizacion{
+    font-size: 2.7em;
+}
 }
