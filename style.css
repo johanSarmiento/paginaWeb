@@ -17,6 +17,10 @@
     align-items: center;
     justify-content: center;
 }
+.formInputs{
+    display: flex;
+    flex-direction: column;
+}
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
 #nav .containerHJ{
@@ -125,7 +129,7 @@
 #TrabajosFinalizados .btnTrabajos{
     transition:  0.3s ease-in-out;
     margin-bottom: 70px;
-    
+
 }
 #TrabajosFinalizados .btnTrabajos:hover{
     transition:  0.3s ease-in-out;
@@ -185,7 +189,8 @@
 }
 #Servicios .divCotizacion{
     height: 70%;
-    width: 45%;
+    width: 100%;
+    flex-direction: column;
 }
 
 

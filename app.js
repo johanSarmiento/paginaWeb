@@ -131,6 +131,10 @@ const divDiseño = document.createElement("div");
 const divPlanos = document.createElement("div");
 const divCotizacion = document.createElement("div");
 const formCotizaicon = document.createElement("form")
+const divNomApe = document.createElement("div");
+const divCor = document.createElement("div");
+const divCiuDep = document.createElement("div");
+const divCom = document.createElement("div");
 const divNombre = document.createElement("div");
 const divApellido = document.createElement("div");
 const divCorreo = document.createElement("div");
@@ -146,7 +150,7 @@ const labelComentario = document.createElement("label");
 const inputNombre = document.createElement("input");
 const inputApellido = document.createElement("input");
 const inputCorreo = document.createElement("input");
-const iinputCiudad = document.createElement("input");
+const inputCiudad = document.createElement("input");
 const inputDepartamento = document.createElement("input");
 const inputComentario = document.createElement("input");
 const btnCotizacion = document.createAttribute("button");
@@ -186,14 +190,42 @@ iconServicio2.setAttribute("class","icon iconDiseño");
 iconServicio3.setAttribute("class","icon iconPlanos");
 divCotizacion.setAttribute("class","divCotizacion containerHJ");
 formCotizaicon.setAttribute("class","formularioCotazacion");
+divNombre.setAttribute("class","formInputs");
+divApellido.setAttribute("class","formInputs");
+divCorreo.setAttribute("class","formInputs");
+divCiudad.setAttribute("class","formInputs");
+divDepartamento.setAttribute("class","formInputs");
+divComentario.setAttribute("class","formInputs");
 inputNombre.setAttribute("type","text");
 inputNombre.setAttribute("id","nombre");
 inputNombre.setAttribute("class","formNombre");
+inputNombre.setAttribute("placeholder"," ");
 labelNombre.setAttribute("for","nombre");
 inputApellido.setAttribute("type","text");
 inputApellido.setAttribute("id","Apellido");
 inputApellido.setAttribute("class","formApellido");
+inputApellido.setAttribute("placeholder"," ");
 labelApellido.setAttribute("for","Apellido");
+inputCorreo.setAttribute("type","email");
+inputCorreo.setAttribute("id","Correo");
+inputCorreo.setAttribute("class","formCorreo");
+inputCorreo.setAttribute("placeholder"," ");
+labelCorreo.setAttribute("for","Correo");
+inputCiudad.setAttribute("type","text");
+inputCiudad.setAttribute("id","Ciudad");
+inputCiudad.setAttribute("class","formCiudad");
+inputCiudad.setAttribute("placeholder"," ");
+labelCiudad.setAttribute("for","Ciudad");
+inputDepartamento.setAttribute("type","texto");
+inputDepartamento.setAttribute("id","Departamento");
+inputDepartamento.setAttribute("class","formDepartamento");
+inputDepartamento.setAttribute("placeholder"," ");
+labelDepartamento.setAttribute("for","Departamento");
+inputComentario.setAttribute("type","texto");
+inputComentario.setAttribute("id","Comentario");
+inputComentario.setAttribute("class","formComentario");
+inputComentario.setAttribute("placeholder"," ");
+labelComentario.setAttribute("for","Comentario");
 //AGREGANDO LOS NODOS HIJOS
 Servicos.appendChild(divServicios);
 divServicios.appendChild(divLeftServicios);
@@ -215,6 +247,29 @@ textServicios3.appendChild(h3Planos);
 textServicios1.appendChild(pConstruccion);
 textServicios2.appendChild(pDiseño);
 textServicios3.appendChild(pPlanos);
+divRightServicios.appendChild(divCotizacion);
+divCotizacion.appendChild(divNomApe);
+divCotizacion.appendChild(divCor);
+divCotizacion.appendChild(divCiuDep);
+divCotizacion.appendChild(divCom);
+divNombre.appendChild(labelNombre);
+divNombre.appendChild(inputNombre);
+divApellido.appendChild(labelApellido);
+divApellido.appendChild(inputApellido);
+divCorreo.appendChild(labelCorreo);
+divCorreo.appendChild(inputCorreo);
+divCiudad.appendChild(labelCiudad);
+divCiudad.appendChild(inputCiudad);
+divDepartamento.appendChild(labelDepartamento);
+divDepartamento.appendChild(inputDepartamento);
+divComentario.appendChild(labelComentario);
+divComentario.appendChild(inputComentario);
+divNomApe.appendChild(divNombre);
+divNomApe.appendChild(divApellido);
+divCor.appendChild(divCorreo);
+divCiuDep.appendChild(divCiudad);
+divCiuDep.appendChild(divDepartamento);
+divCom.appendChild(divComentario);
 // DANDO VALORES
 h2Servicios.textContent = "SERVICIóS";
 h2Cotizacion.textContent = "¡HAZ TU COTIZACIóN AQUI!";
@@ -226,6 +281,10 @@ pDiseño.textContent = "Prestación de servicios profesionales y/o tecnológicos
 pPlanos.textContent = "Creacion y entregas de planos, con una gran profesionalismo en cada detalle. para que pueda tener una gran idea, sobre tu vienda"
 labelNombre.textContent = "Nombre";
 labelApellido.textContent = "Apellido";
+labelCorreo.textContent  = "Correo";
+labelCiudad.textContent = "Ciudad";
+labelDepartamento.textContent = "Departamento"
+labelComentario.textContent = "Comentario"
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 // CRECION DE MAIN / FOOTER
@@ -240,20 +299,6 @@ const divTresFotter = document.createElement("div");
 // ----------------------------------------------------------------------------------------------------------------------------------------
 // FUNCIONES DE LA PAGINA
 
-document.querySelector(".tituloCotizacion").addEventListener("click",()=>{
-    divRightServicios.appendChild(divCotizacion);
-    divCotizacion.appendChild(divNombre);
-    divCotizacion.appendChild(divApellido);
-    divNombre.appendChild(labelNombre);
-    divNombre.appendChild(inputNombre);
-    divApellido.appendChild(labelApellido);
-    divApellido.appendChild(inputApellido);
-
-})
-
-document.querySelector(".tituloCotizacion").addEventListener("dblclick",()=>{
-    divCotizacion.remove();
-})
 
 
 
